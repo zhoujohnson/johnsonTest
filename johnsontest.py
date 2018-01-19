@@ -53,3 +53,5 @@ line = fo.readline(3)
 print("读取的字符串为：%s"%line)
 fo.close()
 '''
+fo = open("johnson.txt","r+")
+print ("fuck out",fo.name)
