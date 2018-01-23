@@ -53,3 +53,53 @@ line = fo.readline(3)
 print("读取的字符串为：%s"%line)
 fo.close()
 '''
+'''# readlines()方法用于读取所有行（直到遇到结束符EOF）并返回列表，
+# 可用for...in...
+
+##打开文件
+fo = open("johnson.txt","r+")
+print ("文件名为：",fo.name)
+for line in fo.readlines():
+    line = line.strip()
+    print ("读取的数据为：%s"%(line))
+fo.close()'''
+'''
+# seek() 方法用于移动文件读取指针到指定位置。
+# 打开文件
+fo = open("johnson.txt","r+")
+print("文件名为：",fo.name)
+line = fo.readline()
+print("读取的字符串为：%s"%(line))
+fo.seek(2,0)
+line = fo.readline()
+print("读取的字符串为：%s"%(line))'''
+
+'''# tell() 方法返回文件的当前位置，即文件指针当前位置。
+fo = open("johnson.txt","r+")
+print ("文件名为：",fo.name)
+line = fo.readline()
+# 获取当前位置
+pos = fo.tell()
+print("当前位置为：%d"%(pos))
+fo.close()'''
+
+#truncate() 方法用于从文件的首行首字符开始截断，截断文件为 
+# size 个字符，无 size 表示从当前位置截断；截断之后 V 后面的
+# 所有字符被删除，其中 Widnows 系统下的换行代表2个字符大小。 。
+# 打开文件
+'''fo = open("johnson.txt","r+")
+print("文件名为：",fo.name)
+line = fo.readline()
+print("读取行：%s"%(line))
+#截取文件
+fo.truncate()
+line = fo.readlines()
+print("截取长度为：%s"%(line))
+fo.close()'''
+
+fo = open("johnson.txt","r+")
+print("打开文件：",fo.name)
+fo.truncate(19)
+line = fo.read()
+print("读取数据：%s"%(line))
+fo.close()
