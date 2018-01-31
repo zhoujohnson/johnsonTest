@@ -1,6 +1,9 @@
 import sys
-sys.path.append("..") #根据 sys.path环境变量的值，找到具体模块路径
-from package.my_abs import my_abs
+sys.path.append("..")
+from package.root_of_equation import quadratic
+
+ #根据 sys.path环境变量的值，找到具体模块路径
+
 '''n1 = 255
 n2 = 1000
 n1 = hex(n1)
@@ -17,7 +20,7 @@ def my_abs(x):
         return -x'''
 
 
-print (my_abs(2)) # 如何从package中导入函数求值
+'''print (my_abs(2)) # 如何从package中导入函数求值
 
 # pass语句作为占位符
 def If ():
@@ -31,4 +34,8 @@ def action (x,y,step,z=0):
     ny = y + step*math.sin(z)
     return nx,ny
 x,y = action(1,2,3,math.pi/2)
+print (x,y)'''
+
+x,y = quadratic(3,4,5)
 print (x,y)
+    
