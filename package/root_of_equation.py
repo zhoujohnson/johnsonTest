@@ -64,9 +64,11 @@ print(qual(4,2))
 print (add_end())
 print (add_end())'''
 
-def add_end (b = []):
+'''def add_end (b = []):
     b.append("End")
     return b
 print (add_end([1,2,3]))
 print (add_end())
-print (add_end())
+print (add_end())'''
+
+
